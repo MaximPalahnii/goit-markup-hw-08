@@ -94,12 +94,26 @@ header .container {
           align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 header a {
   text-decoration: none;
 }
 
 .address {
   font-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .address {
+    display: block;
+  }
 }
 
 .logo {
@@ -112,12 +126,27 @@ header a {
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 81px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .active {
   color: #2196f3;
 }
 
 .nav-item .nav-linc.activenav {
   color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-item .nav-linc.activenav {
+    position: relative;
+  }
 }
 
 .activenav::after {
@@ -135,6 +164,16 @@ header a {
   margin-top: 60px;
 }
 
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0px;
+  }
+}
+
 .nav-item {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -142,6 +181,12 @@ header a {
 
 .nav-item:not(:last-child) {
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .nav-linc {
@@ -155,11 +200,26 @@ header a {
   text-decoration: none;
 }
 
+@media screen and (min-width: 768px) {
+  .nav-linc {
+    display: block;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
 .nav-item .nav-linc {
   color: #212121;
   padding-bottom: 8px;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .nav-item .nav-linc {
+    display: block;
+  }
 }
 
 .nav-item .nav-linc:hover, .nav-item .nav-linc:focus {
@@ -209,6 +269,19 @@ header a {
   letter-spacing: 0.02em;
 }
 
+@media screen and (min-width: 768px) {
+  .contacts-list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    margin-top: 32px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
 .contacts-item:not(:last-child) {
   margin-bottom: 16px;
 }
@@ -247,6 +320,14 @@ header a {
   min-height: 60px;
 }
 
+@media screen and (min-width: 768px) {
+  .logo-and-button {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .header-button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -262,20 +343,50 @@ header a {
   color: #2196f3;
 }
 
+@media screen and (min-width: 768px) {
+  .header-button {
+    display: none;
+  }
+}
+
 .header-button .icon-menu {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header-button .icon-menu {
+    display: none;
+  }
 }
 
 .header-button.is-open .icon-menu {
   display: block;
 }
 
+@media screen and (min-width: 768px) {
+  .header-button.is-open .icon-menu {
+    display: none;
+  }
+}
+
 .header-button.is-open .icon-cross {
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .header-button.is-open .icon-cross {
+    display: none;
+  }
+}
+
 .menu-container.is-open {
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container.is-open {
+    display: none;
+  }
 }
 
 .menu-container {
@@ -289,6 +400,15 @@ header a {
   text-align: center;
   background-color: #fff;
   border-top: 1px solid #ececec;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    min-width: 768px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .hero {
@@ -320,7 +440,6 @@ header a {
 /* modal window */
 .backdrop {
   position: fixed;
-  padding: 40px;
   top: 0;
   left: 0;
   right: 0;
@@ -335,7 +454,10 @@ header a {
 }
 
 .modal {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -344,6 +466,20 @@ header a {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  max-width: calc(100% - 30px);
+  max-height: calc(100% - 30px);
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  margin-top: 93px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #757575;
+  padding: 40px;
   background-color: #ffffff;
   border-radius: 4px;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -354,14 +490,6 @@ header a {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (min-width: 768px) {
-  .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
 }
 
 .backdrop.is-hidden {
