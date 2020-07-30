@@ -1,0 +1,50 @@
+//Наши преимущества
+
+.features .title {
+  opacity: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 0px;
+}
+
+// .features-list {
+//   display: flex;
+// }
+
+// .features .list-item {
+//   display: block;
+// }
+
+.itemfeatitem {
+  display: flex;
+  // width: 270px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 4px;
+}
+
+.featitem {
+  width: 100%;
+}
+
+.featitem:not(:last-child) {
+  margin-right: 30px;
+}
+
+.item-title {
+  display: flex;
+  line-height: 1.14;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.features .item-text {
+  text-align: left;
+}

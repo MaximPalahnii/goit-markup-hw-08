@@ -1,0 +1,36 @@
+.wedoit {
+  display: none;
+  list-style-type: none;
+  text-decoration: none;
+  // display: block;
+}
+
+// .wedoit-list {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+.wedoit-item {
+  display: block;
+  position: relative;
+  z-index: -1;
+}
+
+.wedoit .wedo-image {
+  display: block;
+  background-color: unset;
+}
+
+.wedoit .item-title {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: $white-color;
+  background-color: rgba(47, 48, 58, 0.8);
+
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}

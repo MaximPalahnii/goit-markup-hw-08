@@ -1,0 +1,91 @@
+.team ul {
+  list-style: none;
+}
+
+.team {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.19;
+  background: #f5f4fa;
+}
+
+.team-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.team-item {
+  display: block;
+  max-width: 450px;
+  margin-top: 30px;
+
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.team-item-info {
+  text-align: center;
+  padding: 30px 32px 24px;
+  background: $white-color;
+}
+
+.team .item-title {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+  margin-bottom: 10px;
+}
+
+.team .item-descriptionteam {
+  font-size: 16px;
+  line-height: 1.19;
+  margin-bottom: 16px;
+}
+
+.title {
+  color: $additional-text-color;
+  font-size: 33px;
+  line-height: 1.16;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.item-title {
+  color: $additional-text-color;
+  font-size: 14px;
+  line-height: 0.87;
+  text-transform: uppercase;
+}
+.item-text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.sociallinc {
+  display: flex;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  fill: $fill-color;
+  transition: fill $timing-funktion, background-color $timing-funktion;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    fill: $white-color;
+    background-color: $active-color;
+  }
+}

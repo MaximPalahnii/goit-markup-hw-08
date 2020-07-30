@@ -1,0 +1,52 @@
+//кнопки основные и модального окна
+
+.button {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $white-color;
+  background-color: $active-color;
+
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  transition: color $timing-funktion, border-color $timing-funktion,
+    background-color $timing-funktion;
+}
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  fill: $white-color;
+
+  padding-left: auto;
+}
+
+.subscriber-icon {
+  padding-left: 10px;
+}
+
+.subscriber {
+  display: inline-block;
+
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+}

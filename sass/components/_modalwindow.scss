@@ -1,0 +1,287 @@
+/* modal window */
+.backdrop {
+  position: fixed;
+  // position: relative;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity $timing-funktion;
+}
+
+.modal {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  max-width: calc(100% - 30px);
+  max-height: calc(100% - 30px);
+  overflow: auto;
+
+  text-align: center;
+
+  // max-height: 609px;
+  // max-width: 450px;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  margin-top: 93px;
+
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $timing-funktion;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal-name {
+  display: block;
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  line-height: 1.15;
+  font-size: 20px;
+  color: $additional-text-color;
+}
+
+.modal-input {
+  position: relative;
+
+  display: block;
+  margin-bottom: 30px;
+}
+
+.coment-input {
+  position: relative;
+
+  display: block;
+  margin-bottom: 30px;
+}
+
+.input-field {
+  padding-left: 42px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color $timing-funktion;
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  letter-spacing: 0.01em;
+
+  transition: transform $timing-funktion, color $timing-funktion;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  transition: fill $timing-funktion;
+}
+
+.modal-input:focus-within > .input-field {
+  outline: none;
+  border-color: $active-color;
+}
+
+.modal-input:focus-within > .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+  transform: translate(-25px, -35px);
+  font-size: 12px;
+  line-height: 1.17px;
+  color: $active-color;
+}
+
+.modal-input:focus-within > .modal-icon {
+  fill: $active-color;
+}
+
+.input-textarea {
+  padding-left: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color $timing-funktion;
+}
+
+.input-textfield {
+  position: absolute;
+  top: 10%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  letter-spacing: 0.01em;
+
+  transition: transform $timing-funktion, color $timing-funktion;
+}
+
+.coment-input:focus-within > .input-textarea {
+  outline: none;
+  border-color: $active-color;
+}
+
+.coment-input:focus-within > .input-textfield,
+.input-textarea:not(:placeholder-shown) + .input-textfield {
+  transform: translate(-0px, -35px);
+  font-size: 12px;
+  line-height: 1.17px;
+  color: $active-color;
+}
+
+.coment-input:focus-within > .modal-icon {
+  fill: $active-color;
+}
+
+.form-text {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 42px;
+
+  transform: translateY(-50%);
+  transition: transform $timing-funktion, $timing-funktion;
+
+  line-height: 1.33;
+  letter-spacing: 0.01em;
+}
+
+.icon-label {
+  position: absolute;
+  top: 30%;
+  left: 16px;
+
+  fill: $main-text-color;
+  transform: translateY(-50%);
+  transition: fill $timing-funktion;
+}
+
+.modal-button {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  transform: translate(-130%, 130%);
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  background-color: #ffffff;
+  fill: #000000;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  transition: fill $timing-funktion;
+
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+    fill: $active-color;
+  }
+}
+
+.terms,
+.terms:visited {
+  color: $active-color;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.confirmation {
+  display: inline-block;
+  margin-right: 8px;
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+
+.checkbox:checked + .confirmation {
+  border-color: transparent;
+  background-color: $active-color;
+  background-image: url(../images/modal-galochka.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.email {
+  margin-right: 12px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: $footer-background-color;
+  color: $fill-color;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.email::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
+}

@@ -1,0 +1,162 @@
+.our-works .container {
+  padding-top: 94px;
+}
+
+.our-works h1 {
+  line-height: 0;
+  opacity: 0;
+  margin-top: 0px;
+}
+
+.our-works a {
+  display: block;
+  text-decoration: none;
+}
+
+.our-works ul {
+  list-style: none;
+}
+
+.filters-list {
+  // display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.filters-item {
+  min-width: 73px;
+}
+
+.filters-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.our-works .pbutton {
+  margin: 0;
+  padding: 6px 22px;
+  min-width: 73px;
+  min-height: 38px;
+  letter-spacing: 0.03em;
+  line-height: 1.62;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.works {
+  // display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -15px;
+}
+
+.works-item {
+  // display: block;
+  width: 370px;
+  margin: 15px;
+  transition: box-shadow $timing-funktion;
+
+  &:focus,
+  &:hover {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.works-item .item-title {
+  text-transform: none;
+}
+
+.imageportfolio {
+  position: relative;
+  overflow: hidden;
+}
+.overlay-description,
+.item-description {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  transition: transform $timing-funktion;
+  transition: opacity $timing-funktion;
+}
+
+.item-description {
+  display: block;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: $white-color;
+}
+
+.overlay-description {
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform $timing-funktion, opacity $timing-funktion;
+}
+
+.item-link:hover .overlay-description,
+.item-link:focus .overlay-description {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.item-link {
+  transition: transform $timing-funktion;
+  transition: opacity $timing-funktion;
+  transition: box-shadow $timing-funktion;
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.item-link:hover .item-description,
+.item-link:focus .item-description {
+  opacity: 1;
+}
+
+.item-info {
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  text-align: left;
+  padding: 20px 24px;
+}
+
+.our-works .item-title {
+  color: $additional-text-color;
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.filter-type {
+  color: $main-text-color;
+  font-size: 16px;
+  line-height: 1.87;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.our-works {
+  color: $white-color;
+  font-size: 18px;
+  line-height: 1.56;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
