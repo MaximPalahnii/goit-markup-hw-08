@@ -45,6 +45,9 @@ body.modal-open {
   padding-right: 15px;
   padding-bottom: 94px;
   padding-left: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (min-width: 480px) {
@@ -79,7 +82,6 @@ header {
   line-height: 16px;
   letter-spacing: 0.02em;
   color: #212121;
-  border-bottom: 2px solid #ececec;
 }
 
 .portfolioheader {
@@ -115,7 +117,6 @@ header a {
 }
 
 .nav-item .nav-linc.activenav {
-  position: relative;
   color: #2196f3;
 }
 
@@ -130,24 +131,33 @@ header a {
   border-radius: 2px;
 }
 
+.nav-list {
+  margin-top: 60px;
+}
+
 .nav-item {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 40px;
 }
 
 .nav-linc {
   position: relative;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.02em;
   text-decoration: none;
 }
 
 .nav-item .nav-linc {
   color: #212121;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 8px;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -189,18 +199,23 @@ header a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  margin-top: 68px;
+  margin-bottom: 32px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 21px;
   letter-spacing: 0.02em;
 }
 
 .contacts-item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 16px;
+}
+
+.icon-mail,
+.icon-phone {
+  margin-right: 10px;
 }
 
 .headericon {
@@ -229,7 +244,7 @@ header a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 80px;
+  min-height: 60px;
 }
 
 .header-button {
@@ -266,15 +281,14 @@ header a {
 .menu-container {
   position: absolute;
   display: none;
-  height: 393px;
+  height: auto;
   top: 60px;
   left: 0;
   width: 100%;
-  padding-top: 60px;
-  padding-bottom: 60px;
   z-index: 10;
   text-align: center;
   background-color: #fff;
+  border-top: 1px solid #ececec;
 }
 
 .hero {
@@ -306,10 +320,20 @@ header a {
 /* modal window */
 .backdrop {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  left: 0;
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
@@ -318,18 +342,15 @@ header a {
 }
 
 .modal {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  max-width: calc(100% - 30px);
-  max-height: calc(100% - 30px);
-  overflow: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  padding-top: 40px;
-  padding-right: 40px;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  margin-top: 93px;
   background-color: #ffffff;
   border-radius: 4px;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -744,8 +765,7 @@ header a {
 }
 
 .team-item {
-  display: block;
-  max-width: 450px;
+  width: calc(100% - 15px);
   margin-top: 30px;
   border-radius: 4px;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);

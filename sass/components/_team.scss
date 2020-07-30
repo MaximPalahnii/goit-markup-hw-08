@@ -17,8 +17,9 @@
 }
 
 .team-item {
-  display: block;
-  max-width: 450px;
+  // display: block;
+  // max-width: 450px;
+  width: calc(100% - 15px);
   margin-top: 30px;
 
   border-radius: 4px;

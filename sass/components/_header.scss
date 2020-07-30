@@ -9,7 +9,6 @@ header {
   letter-spacing: 0.02em;
 
   color: $additional-text-color;
-  border-bottom: 2px solid #ececec;
 }
 
 .portfolioheader {
@@ -46,7 +45,7 @@ header a {
 }
 
 .nav-item .nav-linc.activenav {
-  position: relative;
+  // position: relative;
   color: $active-color;
 }
 
@@ -65,25 +64,34 @@ header a {
   border-radius: 2px;
 }
 
-// .nav-list {
-//   position: absolute;
-//   display: flex;
-//   text-align: center;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
-// }
+.nav-list {
+  margin-top: 60px;
+  // position: absolute;
+  // display: flex;
+  // text-align: center;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // align-items: center;
+}
 
 .nav-item {
   transition: color $timing-funktion;
+  // margin-top: 60px;
 }
 
 .nav-item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 40px;
 }
 
 .nav-linc {
   position: relative;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.02em;
 
   // display: block;
   text-decoration: none;
@@ -92,8 +100,8 @@ header a {
 .nav-item .nav-linc {
   // display: block;
   color: $additional-text-color;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  // padding-top: 32px;
+  padding-bottom: 8px;
   transition: color $timing-funktion;
 
   &:hover,
@@ -125,34 +133,33 @@ header a {
 
 .contacts-list {
   // display: flex;
-  // display: flex;
   flex-direction: column;
   justify-content: center;
 
   // margin-right: auto;
   align-items: center;
   // margin-left: 260px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  margin-top: 68px;
+  margin-bottom: 32px;
 
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 21px;
   letter-spacing: 0.02em;
   // height: 80px;
 }
 
 .contacts-item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 16px;
 }
 
-// .icon-mail,
-// .icon-phone {
-//   display: inline-block;
-//   margin-right: 10px;
-// }
+.icon-mail,
+.icon-phone {
+  // display: inline-block;
+  margin-right: 10px;
+}
 
 .headericon {
   align-items: center;
@@ -174,7 +181,7 @@ header a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
+  min-height: 60px;
 }
 
 .header-button {
@@ -211,19 +218,13 @@ header a {
   position: absolute;
   display: none;
 
-  height: 393px;
+  height: auto;
   top: 60px;
   left: 0;
   width: 100%;
-  padding-top: 60px;
-  padding-bottom: 60px;
   z-index: 10;
 
   text-align: center;
   background-color: $white-color;
-
-  // text-align: center;
-  // flex-direction: column;
-  // justify-content: space-between;
-  // align-items: center;
+  border-top: 1px solid #ececec;
 }

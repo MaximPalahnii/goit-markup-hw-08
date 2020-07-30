@@ -1,12 +1,22 @@
 /* modal window */
 .backdrop {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
   // position: relative;
+  // transform: translate(-50%, -50%);
+  // max-width: calc(100% - 30px);
+  // max-height: calc(100% - 30px);
+  // overflow: auto;
 
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  left: 0;
+  // width: 100%;
+  // height: 100%;
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
 
@@ -15,21 +25,27 @@
 }
 
 .modal {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  max-width: calc(100% - 30px);
-  max-height: calc(100% - 30px);
-  overflow: auto;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
 
   text-align: center;
 
   // max-height: 609px;
   // max-width: 450px;
-  padding-top: 40px;
-  padding-right: 40px;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  margin-top: 93px;
+  // padding-top: 40px;
+  // padding-right: 40px;
+  // padding-bottom: 40px;
+  // padding-left: 40px;
+  // margin-top: 93px;
+  // border-radius: 4px;
+  // font-weight: 400;
+  // font-size: 12px;
+  // line-height: 16px;
+  // letter-spacing: 0.01em;
+  // color: #757575;
+  // padding: 40px;
 
   background-color: #ffffff;
   border-radius: 4px;
