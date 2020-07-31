@@ -29,6 +29,11 @@
   text-align: center;
   padding: 0px 15px 10px 0px;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    padding: 0px;
+  }
 }
 
 .filters-item {
@@ -52,10 +57,13 @@
 }
 
 .works {
-  // display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: -15px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .works-item {
@@ -69,6 +77,11 @@
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
       0px 1px 1px rgba(0, 0, 0, 0.12);
   }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    width: 354px;
+  }
 }
 
 .works-item .item-title-portfolio {
@@ -79,6 +92,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .overlay-description,
 .item-description {
   position: absolute;
