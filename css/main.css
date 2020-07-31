@@ -1164,12 +1164,19 @@ footer .container {
   padding-bottom: 28px;
 }
 
-footer .subscribe-social {
-  margin-left: auto;
+@media screen and (min-width: 768px) {
+  footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
 }
 
-footer .subscribe-form {
-  margin-left: auto;
+footer .subscribe-social {
+  margin-left: 165px;
 }
 
 footer a {

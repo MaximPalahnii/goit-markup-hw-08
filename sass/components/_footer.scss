@@ -12,15 +12,23 @@ footer .container {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 45px;
   padding-bottom: 28px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    // padding-top: 60px;
+    text-align: center;
+    // margin-left: 70px;
+  }
 }
 
 footer .subscribe-social {
-  margin-left: auto;
+  margin-left: 165px;
 }
 
-footer .subscribe-form {
-  margin-left: auto;
-}
+// footer .subscribe-form {
+//   margin-left: auto;
+// }
 
 footer a {
   text-decoration: none;
@@ -45,7 +53,7 @@ footer .logo {
 // footer .adresconteiner {
 //   display: flex;
 //   align-items: center;
-//   justify-content: center;
+//   justify-content: column;
 // }
 
 .address-list li:not(:last-child) {
