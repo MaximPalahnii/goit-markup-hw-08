@@ -32,4 +32,8 @@
     border-color: $active-color;
     fill: $active-color;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
 }

@@ -173,13 +173,11 @@ header a {
 }
 
 .contacts-list {
-  // display: flex;
   flex-direction: column;
   justify-content: center;
 
-  // margin-right: auto;
   align-items: center;
-  // margin-left: 260px;
+
   margin-top: 68px;
   margin-bottom: 32px;
 
@@ -189,17 +187,25 @@ header a {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.02em;
-  // height: 80px;
 
   @media screen and (min-width: 768px) {
     justify-content: flex-start;
     align-content: flex-start;
-    // height: 80px;
-    // text-align: center;
     margin-top: 25px;
 
     font-size: 12px;
     line-height: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: baseline;
+    display: flex;
+    margin-top: 32px;
+    margin-left: 170px;
+    margin-right: auto;
+
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
@@ -223,6 +229,10 @@ header a {
   color: $main-text-color;
   fill: $main-text-color;
   transition: color $timing-funktion, fill $timing-funktion;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
 
   &:hover,
   &:focus {

@@ -22,8 +22,9 @@
     flex-wrap: wrap;
   }
 
-  @media screen and (min-width: 1140px) {
-    max-width: 1140px;
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    flex-wrap: nowrap;
     display: flex;
     justify-content: center;
     margin: 0;
@@ -42,10 +43,10 @@
     margin-bottom: 30px;
   }
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 30px) / 4);
     margin-bottom: 30px;
 
-    &:not(:nth-child(2n)) {
+    &:not(:nth-child(4n)) {
       margin-right: 30px;
     }
   }

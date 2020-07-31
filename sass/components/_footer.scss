@@ -6,7 +6,6 @@ footer {
 }
 
 footer .container {
-  // display: flex;
   align-items: baseline;
   justify-content: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -16,9 +15,12 @@ footer .container {
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    // padding-top: 60px;
     text-align: center;
-    // margin-left: 70px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 0px;
+    text-align: start;
+    justify-content: start;
   }
 }
 
@@ -28,6 +30,13 @@ footer .subscribe-social {
   @media screen and (min-width: 768px) {
     margin-left: 165px;
   }
+  @media screen and (min-width: 1200px) {
+    margin-left: 69px;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+    justify-content: flex-start;
+  }
 }
 
 footer .subscribe-form {
@@ -35,6 +44,12 @@ footer .subscribe-form {
 
   @media screen and (min-width: 768px) {
     margin-left: 0px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 94px;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
   }
 }
 
@@ -56,13 +71,11 @@ footer .logo {
   font-size: 22px;
   margin-right: 0px;
   margin-bottom: 20px;
-}
 
-// footer .adresconteiner {
-//   display: flex;
-//   align-items: center;
-//   justify-content: column;
-// }
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+  }
+}
 
 .address-list li:not(:last-child) {
   margin-bottom: 9px;
@@ -75,6 +88,10 @@ footer .logo {
 
   font-size: 14px;
   font-style: normal;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+  }
 }
 
 .address-item a {
@@ -126,6 +143,10 @@ footer .social-item:not(:last-child) {
   font-weight: 700;
   text-transform: uppercase;
   color: $white-color;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 
 .footer-email {
@@ -147,6 +168,9 @@ footer .social-item:not(:last-child) {
 
   @media screen and (min-width: 768px) {
     width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 350px;
   }
 }
 
