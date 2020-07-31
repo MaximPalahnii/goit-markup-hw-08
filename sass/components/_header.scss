@@ -46,8 +46,8 @@ header a {
   letter-spacing: 0.03em;
 
   @media screen and (min-width: 768px) {
-    margin-right: 81px;
-    // display: flex;
+    margin-right: 70px;
+    display: flex;
     justify-content: flex-start;
   }
 }
@@ -95,6 +95,7 @@ header a {
     // padding-top: 32px;
     // padding-bottom: 32px;
     margin-top: 0px;
+    margin-right: 84px;
   }
 }
 
@@ -125,6 +126,8 @@ header a {
 
   @media screen and (min-width: 768px) {
     display: block;
+    padding-top: 32px;
+
     font-family: Roboto;
     font-size: 14px;
     line-height: 16px;
@@ -138,6 +141,7 @@ header a {
 
   @media screen and (min-width: 768px) {
     display: block;
+    padding-bottom: 32px;
     // padding-top: 32px;
   }
 
@@ -192,7 +196,7 @@ header a {
     align-content: flex-start;
     // height: 80px;
     // text-align: center;
-    margin-top: 32px;
+    margin-top: 25px;
 
     font-size: 12px;
     line-height: 14px;
@@ -201,6 +205,10 @@ header a {
 
 .contacts-item:not(:last-child) {
   margin-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
 }
 
 .icon-mail,
@@ -300,8 +308,12 @@ header a {
   border-top: 1px solid #ececec;
 
   @media screen and (min-width: 768px) {
-    min-width: 768px;
+    position: relative;
+    height: 80px;
     display: flex;
+    text-align: start;
+    top: 0px;
+    background-color: transparent;
     // width: unset;
     // text-align: unset;
 
