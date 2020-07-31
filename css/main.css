@@ -1176,7 +1176,23 @@ footer .container {
 }
 
 footer .subscribe-social {
-  margin-left: 165px;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  footer .subscribe-social {
+    margin-left: 165px;
+  }
+}
+
+footer .subscribe-form {
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  footer .subscribe-form {
+    margin-left: 0px;
+  }
 }
 
 footer a {
