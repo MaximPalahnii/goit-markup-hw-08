@@ -1228,6 +1228,12 @@ header a {
   letter-spacing: 0.06em;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscriber {
+    padding: 0px;
+  }
+}
+
 footer {
   color: #fff;
   background-color: #2f303a;
@@ -1405,6 +1411,12 @@ footer .subscribe {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  footer .subscribe {
+    padding: 0px;
+  }
+}
+
 footer .social {
   padding: 0;
 }
@@ -1438,6 +1450,7 @@ footer .social-item:not(:last-child) {
 @media screen and (min-width: 1200px) {
   .footer-call {
     display: block;
+    padding-top: 0px;
   }
 }
 
@@ -1465,6 +1478,8 @@ footer .social-item:not(:last-child) {
 @media screen and (min-width: 1200px) {
   .footer-email {
     width: 350px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 }
 
