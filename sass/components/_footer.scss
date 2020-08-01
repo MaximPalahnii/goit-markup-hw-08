@@ -3,14 +3,17 @@
 footer {
   color: $white-color;
   background-color: $footer-background-color;
+  align-items: center;
+  justify-content: center;
 }
 
 footer .container {
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 45px;
   padding-bottom: 28px;
+  // max-width: 1200px;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -21,6 +24,14 @@ footer .container {
     margin-left: 0px;
     text-align: start;
     justify-content: start;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    // padding-top: 94px;
+    padding-right: 15px;
+    // padding-bottom: 94px;
+    padding-left: 15px;
   }
 }
 
