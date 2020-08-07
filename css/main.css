@@ -74,6 +74,12 @@ footer .container {
   padding-bottom: 0px;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 header {
   font-family: Roboto;
   font-style: normal;
